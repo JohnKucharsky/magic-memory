@@ -1,6 +1,8 @@
 .app {
   max-width: 860px;
   margin: 40px auto;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 button {
@@ -20,16 +22,11 @@ button:hover {
 .card-grid {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 400px) {
   .card-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .card-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
   }
 }
